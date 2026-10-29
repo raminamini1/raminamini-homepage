@@ -54,7 +54,7 @@ h1,h2,h3,p,ol{margin:0}
 .g-dark .lead,.g-dark .list p{color:#a1a1a6}
 .g-dark{--line:rgba(255,255,255,.18)}
 .g-gray{background:var(--gray)}
-.g-dark svg{display:block;width:min(420px,80vw);margin:72px auto 0;overflow:visible}
+.g-dark .net{display:block;width:min(420px,80vw);margin:72px auto 0;overflow:visible}
 
 /* Ablauf */
 .flow{padding:160px 24px}
@@ -85,6 +85,23 @@ body:has(.legal:target) .home{display:none}
 
 @media (max-width:860px){.list li{grid-template-columns:minmax(0,1fr);padding:32px 0}.list p{padding-top:0}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:480px){.nav nav{gap:16px}.words{padding:112px 24px 136px}.group{padding:112px 24px 88px}.list{margin-top:64px}.flow{padding:112px 24px}.steps{grid-template-columns:minmax(0,1fr);margin-top:64px}.steps li::before{margin-bottom:24px}.contact{padding:136px 24px 144px}}
+
+
+.hd{display:flex;flex-direction:column;gap:20px}
+.ill{display:block;width:240px;max-width:100%;height:auto;overflow:visible;color:var(--ink);fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;--sbg:var(--bg);--acc:var(--blue)}
+.g-gray .ill{--sbg:var(--gray)}
+.g-dark .ill{color:#f5f5f7;--sbg:#000;--acc:#2997ff}
+.ill .n{fill:var(--sbg)}
+.ill .a{fill:var(--acc);stroke:var(--acc)}
+.ill .as{stroke:var(--acc)}
+.ill .lb{fill:var(--muted);stroke:none;font:500 11px 'Geist','Helvetica Neue',Arial,sans-serif}
+.g-dark .ill .lb{fill:#a1a1a6}
+.flowd{width:min(560px,100%);margin:72px auto 0}
+.flowd .lb{font-size:12px}
+.draw rect,.draw ellipse{stroke-dasharray:1;stroke-dashoffset:0}
+@supports (animation-timeline: view()){
+  .ill rect,.ill ellipse{animation:draw linear both;animation-timeline:view();animation-range:entry 10% cover 50%}
+}
 
 /* Animation */
 .hero h1{animation:in 1.6s cubic-bezier(.16,1,.3,1) both}
@@ -135,9 +152,9 @@ body:has(.legal:target) .home{display:none}
       <h2 class="big rv">Verstehen.</h2>
       <p class="lead">Wo KI und Software in Ihrem Unternehmen wirklich helfen.</p>
       <ul class="list">
-        <li><h3>KI-Beratung &amp; Strategie</h3><p>Wo lohnt sich KI in Ihrem Unternehmen? Analyse der Abläufe, klare Roadmap, Umsetzung mit Blick auf DSGVO und EU AI Act.</p></li>
-        <li><h3>KI-Readiness-Check</h3><p>Wenige Angaben, schnelle Einschätzung: Wo KI Zeit spart und ob Ihre Daten und Systeme dafür bereit sind.</p></li>
-        <li><h3>Prozess&shy;optimierung</h3><p>Abläufe aufnehmen, Engpässe finden, Prozesse vereinfachen und digitalisieren.</p></li>
+        <li><div class="hd"><h3>KI-Beratung &amp; Strategie</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><path pathLength="1" d="M20 38H200"/><path pathLength="1" d="M208 33l6 5-6 5"/><path pathLength="1" d="M200 38H214"/><circle class="n" cx="20" cy="38" r="6"/><circle class="n" cx="110" cy="38" r="6"/><circle class="a" cx="200" cy="38" r="7"/><text class="lb" x="8" y="66" text-anchor="start">Analyse</text><text class="lb" x="110" y="66" text-anchor="middle">Roadmap</text><text class="lb" x="232" y="66" text-anchor="end">Umsetzung</text></svg></div><p>Wo lohnt sich KI in Ihrem Unternehmen? Analyse der Abläufe, klare Roadmap, Umsetzung mit Blick auf DSGVO und EU AI Act.</p></li>
+        <li><div class="hd"><h3>KI-Readiness-Check</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><rect pathLength="1" x="10" y="10" width="14" height="14" rx="3"/><path pathLength="1" d="M13 17l3 3 6-6"/><rect pathLength="1" x="10" y="32" width="14" height="14" rx="3"/><path pathLength="1" d="M13 39l3 3 6-6"/><rect pathLength="1" x="10" y="54" width="14" height="14" rx="3"/><path pathLength="1" class="as" d="M13 61l3 3 6-6"/><text class="lb" x="32" y="21" text-anchor="start">Daten</text><text class="lb" x="32" y="43" text-anchor="start">Systeme</text><text class="lb" x="32" y="65" text-anchor="start">Abläufe</text><path pathLength="1" d="M140 66A48 48 0 0 1 236 66"/><path pathLength="1" class="as" d="M188 66L216 36"/><circle class="a" cx="188" cy="66" r="5"/></svg></div><p>Wenige Angaben, schnelle Einschätzung: Wo KI Zeit spart und ob Ihre Daten und Systeme dafür bereit sind.</p></li>
+        <li><div class="hd"><h3>Prozess&shy;optimierung</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><path pathLength="1" d="M14 24H180"/><path pathLength="1" d="M140 18C124 -2 76 -2 60 18"/><circle class="n" cx="20" cy="24" r="5"/><circle class="n" cx="60" cy="24" r="5"/><circle class="n" cx="100" cy="24" r="5"/><circle class="n" cx="140" cy="24" r="5"/><circle class="n" cx="180" cy="24" r="5"/><text class="lb" x="232" y="28" text-anchor="end">vorher</text><path pathLength="1" class="as" d="M20 64H170"/><circle class="n" cx="20" cy="64" r="5"/><circle class="n" cx="95" cy="64" r="5"/><circle class="a" cx="170" cy="64" r="6"/><text class="lb" x="232" y="68" text-anchor="end">nachher</text></svg></div><p>Abläufe aufnehmen, Engpässe finden, Prozesse vereinfachen und digitalisieren.</p></li>
       </ul>
     </div>
   </section>
@@ -146,7 +163,7 @@ body:has(.legal:target) .home{display:none}
     <div class="wrap">
       <h2 class="big rv" id="g2">Automatisieren.</h2>
       <p class="lead">Routinearbeit, die von selbst läuft.</p>
-      <svg class="draw" aria-hidden="true" viewBox="0 0 360 200" fill="none" stroke="#f5f5f7" stroke-width="1.5" stroke-linecap="round">
+      <svg class="draw net" aria-hidden="true" viewBox="0 0 360 200" fill="none" stroke="#f5f5f7" stroke-width="1.5" stroke-linecap="round">
         <path pathLength="1" d="M30 40L140 30M30 40L140 100M30 40L140 170M30 100L140 30M30 100L140 100M30 100L140 170M30 160L140 30M30 160L140 100M30 160L140 170"/>
         <path pathLength="1" d="M140 30L240 65M140 30L240 135M140 100L240 65M140 100L240 135M140 170L240 65M140 170L240 135"/>
         <path pathLength="1" d="M240 65L330 100M240 135L330 100"/>
@@ -156,9 +173,9 @@ body:has(.legal:target) .home{display:none}
         <circle cx="330" cy="100" r="10" fill="#2997ff" stroke="#2997ff"/>
       </svg>
       <ul class="list">
-        <li><h3>Workflow-Automatisierung</h3><p>Routineaufgaben automatisieren, von der E-Mail-Sortierung bis zum Bericht. Systeme sprechen miteinander, statt dass Daten von Hand übertragen werden.</p></li>
-        <li><h3>Wissens-KI (RAG)</h3><p>Ein Assistent, der aus Ihren eigenen Unterlagen antwortet: Handbücher, PDFs, FAQs. Belastbare Antworten statt allgemeiner Infos.</p></li>
-        <li><h3>KI-Assistenten &amp; Chatbots</h3><p>Interne Assistenten für Ihr Team und Kundenchat auf der Website, angebunden an Ihre Systeme und Daten.</p></li>
+        <li><div class="hd"><h3>Workflow-Automatisierung</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><rect pathLength="1" x="12" y="22" width="48" height="32" rx="3"/><path pathLength="1" d="M12 24L36 42L60 24"/><path pathLength="1" d="M68 38H96"/><path pathLength="1" d="M96 33l6 5-6 5"/><circle cx="120" cy="38" r="14"/><circle cx="120" cy="38" r="5"/><path pathLength="1" d="M140 38H168"/><path pathLength="1" d="M168 33l6 5-6 5"/><rect pathLength="1" class="as" x="182" y="14" width="40" height="48" rx="3"/><path pathLength="1" class="as" d="M190 28H214M190 37H214M190 46H204"/><text class="lb" x="36" y="80" text-anchor="middle">E-Mail</text><text class="lb" x="120" y="80" text-anchor="middle">Regel</text><text class="lb" x="202" y="80" text-anchor="middle">Bericht</text></svg></div><p>Routineaufgaben automatisieren, von der E-Mail-Sortierung bis zum Bericht. Systeme sprechen miteinander, statt dass Daten von Hand übertragen werden.</p></li>
+        <li><div class="hd"><h3>Wissens-KI (RAG)</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><rect pathLength="1" x="10" y="24" width="30" height="38" rx="3"/><rect pathLength="1" class="n" x="16" y="18" width="30" height="38" rx="3"/><rect pathLength="1" class="n" x="22" y="12" width="30" height="38" rx="3"/><path pathLength="1" d="M28 24H46M28 31H46M28 38H40"/><path pathLength="1" d="M62 37H90"/><path pathLength="1" d="M90 32l6 5-6 5"/><circle cx="114" cy="37" r="14"/><circle class="a" cx="114" cy="37" r="4"/><path pathLength="1" d="M134 37H158"/><path pathLength="1" d="M158 32l6 5-6 5"/><path pathLength="1" class="as" d="M176 16h50a6 6 0 0 1 6 6v22a6 6 0 0 1-6 6h-36l-9 9v-9h-5a6 6 0 0 1-6-6v-22a6 6 0 0 1 6-6z"/><path pathLength="1" class="as" d="M182 28H220M182 37H210"/><text class="lb" x="31" y="80" text-anchor="middle">Unterlagen</text><text class="lb" x="114" y="80" text-anchor="middle">KI</text><text class="lb" x="201" y="80" text-anchor="middle">Antwort</text></svg></div><p>Ein Assistent, der aus Ihren eigenen Unterlagen antwortet: Handbücher, PDFs, FAQs. Belastbare Antworten statt allgemeiner Infos.</p></li>
+        <li><div class="hd"><h3>KI-Assistenten &amp; Chatbots</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><path pathLength="1" d="M18 10h80a6 6 0 0 1 6 6v14a6 6 0 0 1-6 6h-64l-10 8v-8h-6a6 6 0 0 1-6-6v-14a6 6 0 0 1 6-6z"/><path pathLength="1" class="a" d="M66 44h76a6 6 0 0 1 6 6v14a6 6 0 0 1-6 6h-4v8l-10-8h-62a6 6 0 0 1-6-6v-14a6 6 0 0 1 6-6z"/><path pathLength="1" d="M152 57H176"/><ellipse pathLength="1" cx="202" cy="22" rx="22" ry="7"/><path pathLength="1" d="M180 22V62A22 7 0 0 0 224 62V22M180 42A22 7 0 0 0 224 42"/><text class="lb" x="202" y="86" text-anchor="middle">Ihre Daten</text></svg></div><p>Interne Assistenten für Ihr Team und Kundenchat auf der Website, angebunden an Ihre Systeme und Daten.</p></li>
       </ul>
     </div>
   </section>
@@ -168,15 +185,16 @@ body:has(.legal:target) .home{display:none}
       <h2 class="big rv" id="g3">Bauen.</h2>
       <p class="lead">Software, wenn Standardlösungen nicht passen.</p>
       <ul class="list">
-        <li><h3>Maßgeschneiderte Software</h3><p>Individuelle Anwendungen, interne Tools und Systemprogramme. Von der Anforderung bis zum Betrieb.</p></li>
-        <li><h3>Software-Engineering &amp; System&shy;integration</h3><p>Architektur, Entwicklung und Anbindung an bestehende Systeme wie ERP, CRM, Datenbanken und Schnittstellen. Sauberer Code, Tests und Dokumentation.</p></li>
-        <li><h3>Produkt&shy;entwicklung</h3><p>Von der Idee zum funktionierenden Produkt: Anforderungen schärfen, Prototyp bauen, testen, weiterentwickeln.</p></li>
+        <li><div class="hd"><h3>Maßgeschneiderte Software</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><rect pathLength="1" x="10" y="8" width="220" height="70" rx="6"/><path pathLength="1" d="M10 22H230M58 22V78"/><circle class="n" cx="20" cy="15" r="2.5"/><circle class="n" cx="29" cy="15" r="2.5"/><circle class="n" cx="38" cy="15" r="2.5"/><path pathLength="1" d="M20 34H48M20 44H44M20 54H48"/><rect pathLength="1" x="68" y="32" width="64" height="20" rx="3"/><rect pathLength="1" class="a" x="140" y="32" width="80" height="20" rx="3"/><rect pathLength="1" x="68" y="60" width="152" height="10" rx="3"/></svg></div><p>Individuelle Anwendungen, interne Tools und Systemprogramme. Von der Anforderung bis zum Betrieb.</p></li>
+        <li><div class="hd"><h3>Software-Engineering &amp; System&shy;integration</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><rect pathLength="1" x="10" y="8" width="48" height="24" rx="3"/><rect pathLength="1" x="10" y="52" width="48" height="24" rx="3"/><rect pathLength="1" x="182" y="8" width="48" height="24" rx="3"/><rect pathLength="1" x="182" y="52" width="48" height="24" rx="3"/><path pathLength="1" d="M58 20L107 36M58 64L107 48M182 20L133 36M182 64L133 48"/><circle class="a" cx="120" cy="42" r="13"/><text class="lb" x="34" y="24" text-anchor="middle">ERP</text><text class="lb" x="34" y="68" text-anchor="middle">CRM</text><text class="lb" x="206" y="24" text-anchor="middle">DB</text><text class="lb" x="206" y="68" text-anchor="middle">API</text></svg></div><p>Architektur, Entwicklung und Anbindung an bestehende Systeme wie ERP, CRM, Datenbanken und Schnittstellen. Sauberer Code, Tests und Dokumentation.</p></li>
+        <li><div class="hd"><h3>Produkt&shy;entwicklung</h3><svg class="ill draw" viewBox="0 0 240 92" aria-hidden="true"><circle cx="20" cy="44" r="6"/><path pathLength="1" d="M30 44H50"/><rect pathLength="1" x="56" y="32" width="28" height="24" rx="3"/><path pathLength="1" d="M90 44H104"/><rect pathLength="1" x="110" y="24" width="40" height="40" rx="4"/><path pathLength="1" d="M156 44H168"/><rect pathLength="1" class="as" x="174" y="12" width="58" height="64" rx="5"/><circle class="a" cx="203" cy="44" r="8"/><text class="lb" x="20" y="88" text-anchor="middle">Idee</text><text class="lb" x="70" y="88" text-anchor="middle">Skizze</text><text class="lb" x="130" y="88" text-anchor="middle">Prototyp</text><text class="lb" x="203" y="88" text-anchor="middle">Produkt</text></svg></div><p>Von der Idee zum funktionierenden Produkt: Anforderungen schärfen, Prototyp bauen, testen, weiterentwickeln.</p></li>
       </ul>
     </div>
   </section>
 
   <section class="flow" id="ablauf">
     <h2 class="big rv">So arbeiten wir.</h2>
+    <svg class="ill draw flowd" viewBox="0 0 360 150" aria-hidden="true"><path pathLength="1" d="M50 60H130M150 60H220M240 60H310"/><path pathLength="1" d="M230 72C230 116 140 116 140 72"/><path pathLength="1" d="M134 80L140 72L146 80"/><circle class="n" cx="40" cy="60" r="10"/><circle class="n" cx="140" cy="60" r="10"/><circle class="n" cx="230" cy="60" r="10"/><circle class="a" cx="320" cy="60" r="11"/><text class="lb" x="40" y="32" text-anchor="middle">Analyse</text><text class="lb" x="140" y="32" text-anchor="middle">Prototyp</text><text class="lb" x="230" y="32" text-anchor="middle">Feinschliff</text><text class="lb" x="320" y="32" text-anchor="middle">Livegang</text><text class="lb" x="185" y="136" text-anchor="middle">Feedback</text></svg>
     <ol class="steps">
       <li><h3>Analyse</h3><p>Anforderungen und Abläufe verstehen.</p></li>
       <li><h3>Prototyp</h3><p>Eine erste funktionierende Lösung.</p></li>
